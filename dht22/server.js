@@ -1,7 +1,9 @@
 const sensor = require("node-dht-sensor").promises;
  
+
+interval = setInterval(function () {
 async function exec() {
-interval = setInterval(function () {     
+     
   try {
      
     const res = await sensor.read(22, 17);
@@ -12,7 +14,7 @@ interval = setInterval(function () {
   } catch (err) {
     console.error("Failed to read sensor data:", err);
   }
-}, 1000);
+
 
 process.on('SIGINT', function () { //#F
     clearInterval(interval);
@@ -23,9 +25,10 @@ process.on('SIGINT', function () { //#F
 
 }
 
+exec();
 
+}, 1000);
   
 
 
  
-exec();
