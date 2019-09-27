@@ -18,7 +18,7 @@ async function exec() {
 
 process.on('SIGINT', function () { //#F
     clearInterval(interval);
-    console.log('Bye, bye!');
+    console.log('Bye, bye! Stary!!!');
     process.exit();
   });
 
