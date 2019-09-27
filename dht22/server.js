@@ -27,7 +27,7 @@ process.on('SIGINT', function () { //#F
 
 exec();
 
-}, 1000);
+}, 3000);
   
 
 
